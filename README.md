@@ -1,351 +1,359 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" alt="Python">
-  <img src="https://img.shields.io/badge/Plotly-5.0+-green.svg" alt="Plotly">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
-  <img src="https://img.shields.io/badge/Analysis-2004--2024-orange.svg" alt="Period">
-  <img src="https://img.shields.io/badge/Charts-14-purple.svg" alt="Charts">
-</p>
+<h1 align="center">
+  <br>
+  🇮🇳 India's Economic Journey
+  <br>
+</h1>
 
-<h1 align="center">India Economic Comparison System</h1>
+<h3 align="center">A Data-Driven Story of Transformation (2004-2024)</h3>
 
 <p align="center">
-  <strong>A Comprehensive, Transparent, and Methodologically Rigorous Economic Analysis Platform</strong>
+  <strong>Comparing India's Economic Performance: UPA Era vs NDA Era</strong>
 </p>
 
 <p align="center">
-  Comparing India's Economic Performance: UPA Era (2004-2014) vs NDA Era (2014-2024)
+  <img src="https://img.shields.io/badge/Years-20-blue" alt="Years">
+  <img src="https://img.shields.io/badge/GDP_2024-$3.57T-green" alt="GDP">
+  <img src="https://img.shields.io/badge/Global_Rank-5th-orange" alt="Rank">
+  <img src="https://img.shields.io/badge/Poverty_Reduced-260M+-purple" alt="Poverty">
 </p>
 
 ---
 
-## Overview
+## 📊 The Headlines
 
-This project provides **professional-grade economic analysis** comparing India's macroeconomic performance across two distinct political periods. Built with the rigor expected by economists and policy analysts, it features:
+<table>
+<tr>
+<td width="50%">
 
-- **14 Interactive Visualizations** powered by Plotly
-- **20 Years of Economic Data** (2004-2024)
-- **6+ Key Macroeconomic Indicators**
-- **Multiple Analytical Frameworks** (Causal Inference, Counterfactual Analysis, Uncertainty Quantification)
-- **Ethical Review Framework** ensuring balanced, unbiased analysis
-
----
-
-## Key Economic Indicators Analyzed
-
-| Category | Indicators | Data Source |
-|----------|-----------|-------------|
-| **Growth** | GDP Growth Rate, Per Capita Income, Industrial Production | MOSPI |
-| **Inflation** | CPI Combined, Food Inflation, WPI | RBI |
-| **Fiscal** | Fiscal Deficit (% GDP), Public Debt, Tax/GDP Ratio | Budget Documents |
-| **External** | Current Account, Forex Reserves, FDI Inflows, Trade Balance | RBI, DPIIT |
-| **Employment** | Unemployment Rate, Labor Force Participation | CMIE, NSSO |
-
----
-
-## Interactive Charts Gallery
-
-### Core Economic Indicators
-
-| Chart | Description | Key Insight |
-|-------|-------------|-------------|
-| **GDP Growth Time Series** | 20-year GDP growth with period shading | Pre-GFC peak (9.6%), COVID trough (-6.6%) |
-| **Period Comparison Bars** | Side-by-side indicator comparison | UPA avg: 7.8% growth, NDA avg: 6.1% growth |
-| **Multi-Dimensional Radar** | Normalized scores across 6 dimensions | Trade-offs between growth and stability |
-| **Forex Reserves Trend** | $141B to $645B accumulation | 4.6x growth in reserves over 20 years |
-
-### Advanced Economic Analysis
-
-| Chart | Description | Economist Use Case |
-|-------|-------------|-------------------|
-| **Phillips Curve Analysis** | Growth-Inflation scatter plot | Identify optimal policy mix years |
-| **Twin Deficits Analysis** | Fiscal + Current Account dual-axis | Assess macroeconomic stability |
-| **Debt Sustainability** | Debt/GDP with Maastricht benchmark | Evaluate fiscal headroom |
-| **Trade Balance Waterfall** | Exports, Imports, Net Trade | Track global integration |
-| **Policy Impact Waterfall** | Event-wise growth decomposition | Attribute growth to policies |
-| **Correlation Heatmap** | Inter-indicator relationships | Understand economic linkages |
-
----
-
-## Period Summary Statistics
-
-### UPA Era (2004-2014)
+### 🔵 UPA Era (2004-2014)
 | Metric | Value |
 |--------|-------|
-| Average GDP Growth | 7.8% |
-| Average Inflation | 8.1% |
-| Forex Reserves Change | +$163B |
-| Cumulative FDI | $303B |
+| **Avg GDP Growth** | 7.8% |
+| **Avg Inflation** | 8.1% |
+| **Forex Change** | +$163B |
+| **Cumulative FDI** | $303B |
+| **Starting Rank** | #12 |
+| **Ending Rank** | #10 |
 
-### NDA Era (2014-2024)
+</td>
+<td width="50%">
+
+### 🟠 NDA Era (2014-2024)
 | Metric | Value |
 |--------|-------|
-| Average GDP Growth | 6.1%* |
-| Average Inflation | 5.0% |
-| Forex Reserves Change | +$341B |
-| Cumulative FDI | $665B |
+| **Avg GDP Growth** | 6.1%* |
+| **Avg Inflation** | 5.0% |
+| **Forex Change** | +$341B |
+| **Cumulative FDI** | $665B |
+| **Starting Rank** | #10 |
+| **Ending Rank** | #5 |
 
-*Note: Includes COVID-19 impact year (-6.6% in 2020-21)
+</td>
+</tr>
+</table>
+
+<p align="center"><em>*Includes COVID year (-6.6%). Excluding COVID: 7.1%</em></p>
 
 ---
 
-## Installation
+## 📖 Chapter 1: The Starting Point
 
-```bash
-# Clone the repository
-git clone https://github.com/MAYANK12-WQ/India-Economic-Comparison.git
-cd India-Economic-Comparison
+> *"In 2004, India was a $720 billion economy, ranked 12th globally. Twenty years later, it stands at $3.57 trillion, ranked 5th."*
 
-# Create virtual environment
-python -m venv venv
+### India's GDP Journey (USD Trillion)
 
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
+```
+$3.57T ┤                                              ████
+$3.18T ┤                                         ████ ████
+$2.87T ┤                                    ████ ████ ████
+$2.65T ┤                               ████ ████ ████ ████
+$2.29T ┤                          ████ ████ ████ ████ ████
+$2.04T ┤                     ████ ████ ████ ████ ████ ████
+$1.86T ┤                ████ ████ ████ ████ ████ ████ ████
+$1.68T ┤           ████ ████ ████ ████ ████ ████ ████ ████
+$1.24T ┤      ████ ████ ████ ████ ████ ████ ████ ████ ████
+$0.72T ┤ ████ ████ ████ ████ ████ ████ ████ ████ ████ ████
+       └──────────────────────────────────────────────────
+        '04  '06  '08  '10  '12  '14  '16  '18  '20  '22  '24
+        ├────── UPA Era ──────┤├────── NDA Era ──────────┤
+```
 
-# Install dependencies
-pip install -r requirements.txt
+| Year | GDP (USD T) | Milestone |
+|------|-------------|-----------|
+| 2004-05 | $0.72T | Starting point |
+| 2007-08 | $1.24T | **Crossed $1 Trillion** |
+| 2014-15 | $2.04T | **Crossed $2 Trillion** |
+| 2021-22 | $3.18T | **Crossed $3 Trillion** |
+| 2023-24 | $3.57T | Current |
 
-# For development
-pip install -e ".[dev]"
+---
+
+## 📖 Chapter 2: The Growth Story
+
+### GDP Growth Rate (%) — Year by Year
+
+```
+     UPA ERA (Blue)              NDA ERA (Orange)
+     ─────────────              ─────────────────
+ 10% ┤    ██ ██
+  9% ┤ ██ ██ ██ ██         ██            ██
+  8% ┤ ██ ██ ██ ██ ██   ██ ██ ██      ██ ██
+  7% ┤ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██  ██ ██ ██
+  6% ┤ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██  ██ ██ ██
+  5% ┤ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██  ██ ██ ██
+  4% ┤ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██  ██ ██ ██ ██
+  3% ┤ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██  ██ ██ ██ ██
+  0% ┼──────────────────────────────────────────────
+ -7% ┤                                    ██ ← COVID
+     └──────────────────────────────────────────────
+      '04 '05 '06 '07 '08 '09 '10 '11 '12 '13 '14 '15 '16 '17 '18 '19 '20 '21 '22 '23
+```
+
+<details>
+<summary><strong>📋 Click to see full GDP Growth data</strong></summary>
+
+| Year | Growth | Era | Notes |
+|------|--------|-----|-------|
+| 2004-05 | 7.1% | UPA | |
+| 2005-06 | 9.5% | UPA | |
+| 2006-07 | **9.6%** | UPA | Peak growth |
+| 2007-08 | 9.3% | UPA | Pre-GFC high |
+| 2008-09 | 6.7% | UPA | Global Financial Crisis |
+| 2009-10 | 8.6% | UPA | Recovery |
+| 2010-11 | 8.9% | UPA | |
+| 2011-12 | 6.7% | UPA | |
+| 2012-13 | 5.5% | UPA | Policy paralysis |
+| 2013-14 | 6.4% | UPA | |
+| 2014-15 | 7.4% | NDA | |
+| 2015-16 | 8.0% | NDA | |
+| 2016-17 | 8.3% | NDA | Pre-Demo high |
+| 2017-18 | 6.8% | NDA | Demonetization impact |
+| 2018-19 | 6.5% | NDA | |
+| 2019-20 | 3.7% | NDA | Pre-COVID slowdown |
+| 2020-21 | **-6.6%** | NDA | COVID-19 |
+| 2021-22 | 8.7% | NDA | V-shaped recovery |
+| 2022-23 | 7.2% | NDA | |
+| 2023-24 | 7.6% | NDA | |
+
+</details>
+
+---
+
+## 📖 Chapter 3: Taming Inflation
+
+> *"Inflation fell from an average of 8.1% (UPA) to 5.0% (NDA) — a significant improvement in price stability."*
+
+### Inflation Rate (CPI %)
+
+```
+ 12% ┤         ██
+ 11% ┤         ██
+ 10% ┤      ██ ██ ██    ██
+  9% ┤   ██ ██ ██ ██ ██ ██ ██
+  8% ┤   ██ ██ ██ ██ ██ ██ ██
+  7% ┤   ██ ██ ██ ██ ██ ██ ██                 ██
+  6% ┤   ██ ██ ██ ██ ██ ██ ██ ██           ██ ██ ██
+  5% ┤   ██ ██ ██ ██ ██ ██ ██ ██ ██ ██  ██ ██ ██ ██
+  4% ┤██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██
+     └─────────────────────────────────────────────────
+      '04 '05 '06 '07 '08 '09 '10 '11 '12 '13 '14 '15 '16 '17 '18 '19 '20 '21 '22 '23
+      ├─────────── UPA: 8.1% avg ──────────┤├─────── NDA: 5.0% avg ────────┤
+```
+
+| Period | Average Inflation | Peak Year |
+|--------|-------------------|-----------|
+| UPA (2004-14) | **8.1%** | 12.4% (2009-10) |
+| NDA (2014-24) | **5.0%** | 6.7% (2022-23) |
+
+---
+
+## 📖 Chapter 4: Building External Strength
+
+### Foreign Exchange Reserves (USD Billion)
+
+```
+$645B ┤                                              ████
+$577B ┤                                         ████ ████
+$478B ┤                                    ████ ████ ████
+$424B ┤                               ████ ████ ████ ████
+$370B ┤                          ████ ████ ████ ████ ████
+$341B ┤                     ████ ████ ████ ████ ████ ████
+$310B ┤      ████      ████ ████ ████ ████ ████ ████ ████
+$279B ┤ ████ ████ ████ ████ ████ ████ ████ ████ ████ ████
+$141B ┤ ████
+      └────────────────────────────────────────────────────
+       '04  '06  '08  '10  '12  '14  '16  '18  '20  '22  '24
+
+       📈 4.6x Growth: $141B → $645B (enough for 11 months of imports)
+```
+
+### FDI Inflows (USD Billion)
+
+| Period | Cumulative FDI | Annual Average |
+|--------|----------------|----------------|
+| UPA (2004-14) | **$303B** | $30.3B |
+| NDA (2014-24) | **$665B** | $66.5B |
+| **Difference** | +$362B | **+119% increase** |
+
+---
+
+## 📖 Chapter 5: Global Rise
+
+### India's Position in World Economy
+
+```
+Rank
+ 12 ┤ ●───●───●
+ 11 ┤          ╲───●───●───●
+ 10 ┤                       ╲───●───●───●───●
+  9 ┤                                        ╲───●
+  7 ┤                                             ╲───●───●
+  6 ┤                                                      ╲───●───●
+  5 ┤                                                               ╲───●───●───●───●
+    └────────────────────────────────────────────────────────────────────────────────
+     '04  '05  '06  '07  '08  '09  '10  '11  '12  '13  '14  '15  '16  '17  '18  '19  '20  '21  '22  '23  '24
+
+     🏆 From 12th → 5th Largest Economy
+```
+
+| Year | Rank | Countries Overtaken |
+|------|------|---------------------|
+| 2004 | 12th | — |
+| 2015 | 7th | Brazil, Italy, Canada |
+| 2019 | 5th | UK, France |
+| 2024 | 5th | (Projected #3 by 2028) |
+
+---
+
+## 📖 Chapter 6: The Human Story
+
+### Poverty Reduction
+
+```
+ 37% ┤ ████
+ 32% ┤ ████ ████ ████
+ 27% ┤ ████ ████ ████ ████
+ 22% ┤ ████ ████ ████ ████ ████ ████
+ 17% ┤ ████ ████ ████ ████ ████ ████ ████ ████
+ 12% ┤ ████ ████ ████ ████ ████ ████ ████ ████ ████ ████ ████
+ 10% ┤                                                       ████
+     └───────────────────────────────────────────────────────────
+      '04  '06  '08  '10  '12  '14  '16  '18  '20  '22  '24
+
+      📉 ~260 Million people lifted out of poverty
+```
+
+### Per Capita Income Growth
+
+| Year | Per Capita Income | Growth |
+|------|-------------------|--------|
+| 2004-05 | ₹26,674 | — |
+| 2013-14 | ₹79,412 | +198% |
+| 2023-24 | ₹1,84,507 | **+592%** (7x from 2004) |
+
+---
+
+## 📖 Chapter 7: The Scorecard
+
+### Multi-Dimensional Comparison (Normalized 0-100)
+
+| Dimension | UPA Score | NDA Score | Better |
+|-----------|-----------|-----------|--------|
+| GDP Growth | 78 | 61 | 🔵 UPA |
+| Low Inflation | 42 | 75 | 🟠 NDA |
+| Fiscal Prudence | 55 | 58 | 🟠 NDA |
+| Forex Strength | 65 | 85 | 🟠 NDA |
+| FDI Attraction | 55 | 80 | 🟠 NDA |
+| Employment | 70 | 60 | 🔵 UPA |
+
+```
+                UPA 🔵          NDA 🟠
+GDP Growth     ████████████████░░░░ 78    ████████████░░░░░░░░ 61
+Low Inflation  ████████░░░░░░░░░░░░ 42    ███████████████░░░░░ 75
+Fiscal         ███████████░░░░░░░░░ 55    ████████████░░░░░░░░ 58
+Forex          █████████████░░░░░░░ 65    █████████████████░░░ 85
+FDI            ███████████░░░░░░░░░ 55    ████████████████░░░░ 80
+Employment     ██████████████░░░░░░ 70    ████████████░░░░░░░░ 60
 ```
 
 ---
 
-## Quick Start
+## 📊 Complete Data Tables
 
-### Generate All Charts
-```bash
-python generate_charts.py
-python generate_advanced_charts.py
-```
+<details>
+<summary><strong>📋 All Economic Indicators (2004-2024)</strong></summary>
 
-### View Interactive Dashboard
-Open `charts/index.html` in your browser.
+| Year | GDP Growth | Inflation | Fiscal Deficit | Forex ($B) | FDI ($B) | Unemployment |
+|------|------------|-----------|----------------|------------|----------|--------------|
+| 2004-05 | 7.1% | 3.8% | 4.0% | 141 | 6.0 | 5.3% |
+| 2005-06 | 9.5% | 4.4% | 4.1% | 151 | 8.9 | 5.2% |
+| 2006-07 | 9.6% | 6.5% | 3.5% | 199 | 22.8 | 5.1% |
+| 2007-08 | 9.3% | 6.2% | 2.5% | 310 | 34.8 | 4.9% |
+| 2008-09 | 6.7% | 9.1% | 6.0% | 252 | 41.9 | 5.0% |
+| 2009-10 | 8.6% | 12.4% | 6.5% | 279 | 37.7 | 4.8% |
+| 2010-11 | 8.9% | 10.4% | 4.8% | 305 | 34.8 | 4.7% |
+| 2011-12 | 6.7% | 8.9% | 5.9% | 294 | 46.5 | 4.5% |
+| 2012-13 | 5.5% | 10.2% | 4.9% | 292 | 34.3 | 4.7% |
+| 2013-14 | 6.4% | 9.4% | 4.5% | 304 | 36.0 | 4.9% |
+| 2014-15 | 7.4% | 5.9% | 4.1% | 341 | 45.1 | 5.0% |
+| 2015-16 | 8.0% | 4.9% | 3.9% | 360 | 55.5 | 5.2% |
+| 2016-17 | 8.3% | 4.5% | 3.5% | 370 | 60.2 | 5.4% |
+| 2017-18 | 6.8% | 3.6% | 3.5% | 424 | 61.0 | 6.0% |
+| 2018-19 | 6.5% | 3.4% | 3.4% | 412 | 62.0 | 5.8% |
+| 2019-20 | 3.7% | 4.8% | 4.6% | 478 | 74.4 | 5.3% |
+| 2020-21 | -6.6% | 6.2% | 9.2% | 577 | 81.7 | 8.0% |
+| 2021-22 | 8.7% | 5.5% | 6.7% | 607 | 83.6 | 5.8% |
+| 2022-23 | 7.2% | 6.7% | 6.4% | 578 | 71.4 | 5.4% |
+| 2023-24 | 7.6% | 5.4% | 5.9% | 645 | 70.9 | 5.2% |
 
-### Run Full Comparison Analysis
-```python
-from src.comparison_engine import ComparisonEngine
-
-engine = ComparisonEngine()
-result = engine.run_full_comparison()
-print(result.executive_summary)
-```
-
-### Command Line Interface
-```bash
-# Compare all indicators
-india-econ compare --output report.json
-
-# Analyze specific policy impact
-india-econ causal --policy demonetization --method did
-
-# Run counterfactual scenario
-india-econ counterfactual --scenario no_demonetization
-
-# Get debate response with data backing
-india-econ debate "UPA benefited from favorable global conditions"
-```
+</details>
 
 ---
 
-## Project Architecture
+## 🎯 Key Takeaways
 
-```
-India-Economic-Comparison/
-├── charts/                      # Generated interactive visualizations
-│   ├── index.html              # Main dashboard
-│   ├── 01_gdp_growth_timeseries.html
-│   ├── 02_period_comparison_bars.html
-│   ├── ...
-│   └── 14_statistical_summary.html
-├── src/
-│   ├── comparison_engine.py    # Main orchestration engine
-│   ├── cli.py                  # Command line interface
-│   ├── data_pipeline/          # Data fetching, validation, caching
-│   ├── data_skepticism/        # Quality assessment, bias detection
-│   ├── causal_inference/       # DiD, Synthetic Control, RDD
-│   ├── counterfactual/         # What-if scenario simulation
-│   ├── uncertainty/            # Bootstrap confidence intervals
-│   ├── debate_assistant/       # Real-time argument responses
-│   ├── ethical_framework/      # Balanced analysis enforcement
-│   ├── predictive_forensics/   # Political claim validation
-│   ├── visualization/          # Chart generation
-│   └── api/                    # REST API endpoints
-├── data/
-│   └── sample_indicators.json  # Economic data 2004-2024
-├── tests/                      # Comprehensive test suite
-├── config/
-│   └── settings.yaml           # Configuration
-├── generate_charts.py          # Basic chart generator
-├── generate_advanced_charts.py # Advanced economist-grade charts
-└── requirements.txt
-```
+### What UPA Did Better:
+- ✅ Higher average GDP growth (7.8% vs 6.1%)
+- ✅ Benefited from global growth boom (2004-2008)
+- ✅ Lower unemployment in later years
+
+### What NDA Did Better:
+- ✅ Lower inflation (5.0% vs 8.1%)
+- ✅ Higher FDI attraction ($665B vs $303B)
+- ✅ Larger forex accumulation (+$341B vs +$163B)
+- ✅ Better global ranking improvement (10th→5th)
+
+### External Factors:
+- ⚠️ UPA: Global boom period, then 2008 crisis
+- ⚠️ NDA: Demonetization, GST transition, COVID-19 pandemic
 
 ---
 
-## Analytical Methodology
+## 🔗 Interactive Charts
 
-### Causal Inference Methods
-- **Difference-in-Differences (DiD)**: Compare treatment effects before/after policy interventions
-- **Synthetic Control Method**: Construct counterfactual scenarios
-- **Regression Discontinuity Design**: Analyze threshold-based policy effects
-
-### Uncertainty Quantification
-- Bootstrap confidence intervals (10,000 iterations)
-- Bayesian credible intervals
-- Sensitivity analysis for key assumptions
-
-### Data Quality Framework
-- Multi-source cross-validation
-- Methodology change adjustments
-- Bias detection and correction
-- Reliability scoring (0-10 scale)
+For interactive versions of all charts, visit: **[Live Dashboard](https://mayank12-wq.github.io/India-Economic-Comparison/)**
 
 ---
 
-## Ethical Principles
+## 📚 Data Sources
 
-This project adheres to strict ethical guidelines for economic analysis:
-
-| Principle | Implementation |
-|-----------|---------------|
-| **No Cherry-Picking** | All time periods 2004-2024 included |
-| **Equal Scrutiny** | Same rigor applied to both periods |
-| **Transparent Assumptions** | All methodological choices documented |
-| **Acknowledge Limitations** | Data quality issues clearly stated |
-| **No Oversimplification** | No single "winner" declared |
-| **Avoid Hindsight Bias** | Decisions judged on contemporaneous info |
-| **Human Impact First** | Welfare outcomes prioritized |
+| Source | Data |
+|--------|------|
+| **MOSPI** | GDP, GVA, Per Capita Income |
+| **RBI** | Inflation, Forex, Current Account |
+| **World Bank** | Development Indicators |
+| **IMF** | Global Rankings, WEO Data |
+| **DPIIT** | FDI Inflows |
+| **CMIE** | Unemployment Data |
 
 ---
 
-## API Reference
+## ⚠️ Disclaimer
 
-### REST Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/indicators` | GET | List available indicators |
-| `/api/v1/compare` | POST | Compare two periods |
-| `/api/v1/causal/analyze` | POST | Run causal analysis |
-| `/api/v1/counterfactual/simulate` | POST | Simulate alternative scenario |
-| `/api/v1/debate/respond` | POST | Get data-backed debate response |
-| `/api/v1/claims/validate` | POST | Validate political claims |
-
-### Python API
-
-```python
-from src.comparison_engine import ComparisonEngine
-
-# Initialize
-engine = ComparisonEngine()
-
-# Run comparison
-result = engine.run_full_comparison()
-
-# Access specific comparisons
-gdp_comp = result.indicator_comparisons["gdp_growth_rate"]
-print(f"UPA Mean: {gdp_comp['period_a']['mean']:.1f}%")
-print(f"NDA Mean: {gdp_comp['period_b']['mean']:.1f}%")
-print(f"Statistically Significant: {gdp_comp['significant']}")
-
-# Causal analysis
-causal = engine.causal_engine.analyze_policy_impact(
-    "demonetization", method="did"
-)
-print(causal.interpretation)
-
-# Debate response
-response = engine.get_debate_response(
-    "GDP growth was higher under UPA"
-)
-print(response.response_text)
-```
-
----
-
-## Data Sources
-
-| Source | Indicators | Frequency |
-|--------|-----------|-----------|
-| **MOSPI** | GDP, GVA, Per Capita Income | Annual/Quarterly |
-| **RBI** | Inflation, Forex, Current Account | Monthly/Annual |
-| **World Bank** | Development indicators, PPP data | Annual |
-| **IMF** | WEO projections, fiscal data | Annual |
-| **DPIIT** | FDI inflows by sector | Monthly |
-| **CMIE** | Unemployment, LFPR | Monthly |
-
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Run tests (`pytest tests/`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-### Development Setup
-```bash
-pip install -e ".[dev]"
-pre-commit install
-pytest tests/ -v
-```
-
----
-
-## Citation
-
-If you use this system in research or publications:
-
-```bibtex
-@software{india_economic_comparison_2024,
-  title = {India Economic Comparison System},
-  author = {Economic Analysis Team},
-  year = {2024},
-  url = {https://github.com/MAYANK12-WQ/India-Economic-Comparison},
-  description = {Comprehensive analysis platform for comparing India's
-                 economic performance across UPA (2004-2014) and
-                 NDA (2014-2024) periods}
-}
-```
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Disclaimer
-
-This system is designed for **educational and research purposes**. Economic analysis is inherently complex, and no comparison can fully capture all relevant factors.
-
-**Users should:**
-- Cross-validate findings with other sources
-- Consider the documented methodological limitations
-- Avoid drawing oversimplified conclusions
-- Use the provided uncertainty intervals
-- Acknowledge that external conditions differed significantly between periods
-
-**This system aims to inform debate, not settle it.**
+This analysis is for **educational and research purposes**. Economic performance is multi-dimensional. External conditions differed between periods. This aims to **inform debate, not settle it**.
 
 ---
 
 <p align="center">
-  <strong>Built with Python, Plotly, and Rigorous Economic Methodology</strong>
-</p>
-
-<p align="center">
-  Data Sources: MOSPI | RBI | World Bank | IMF | DPIIT | CMIE
-</p>
-
-<p align="center">
-  <a href="charts/index.html">View Interactive Dashboard</a>
+  <strong>Built with Python, Plotly, and Rigorous Methodology</strong>
 </p>
