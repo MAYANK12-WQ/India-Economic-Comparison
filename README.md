@@ -92,7 +92,7 @@ This project provides **professional-grade economic analysis** comparing India's
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/India-Economic-Comparison.git
+git clone https://github.com/MAYANK12-WQ/India-Economic-Comparison.git
 cd India-Economic-Comparison
 
 # Create virtual environment
@@ -308,7 +308,7 @@ If you use this system in research or publications:
   title = {India Economic Comparison System},
   author = {Economic Analysis Team},
   year = {2024},
-  url = {https://github.com/YOUR_USERNAME/India-Economic-Comparison},
+  url = {https://github.com/MAYANK12-WQ/India-Economic-Comparison},
   description = {Comprehensive analysis platform for comparing India's
                  economic performance across UPA (2004-2014) and
                  NDA (2014-2024) periods}
