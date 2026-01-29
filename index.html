@@ -3,83 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India Economic Comparison - Professional Analysis Dashboard</title>
+    <title>India Economic Comparison - Complete Analysis Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #fff;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .flag-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+        .container { max-width: 1500px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 50px; }
+        .flag-icon { font-size: 56px; margin-bottom: 15px; }
         h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 3rem; font-weight: 700;
             background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #a0a0a0;
-            font-weight: 300;
+        .subtitle { font-size: 1.3rem; color: #a0a0a0; font-weight: 300; }
+        .period-badges { display: flex; justify-content: center; gap: 20px; margin-top: 25px; flex-wrap: wrap; }
+        .badge { padding: 14px 28px; border-radius: 30px; font-weight: 600; font-size: 1rem; }
+        .badge-upa { background: linear-gradient(135deg, #3366CC, #1a3a6e); }
+        .badge-nda { background: linear-gradient(135deg, #FF9900, #cc7a00); }
+        .stats-banner { display: flex; justify-content: center; gap: 50px; margin: 40px 0; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-value {
+            font-size: 3rem; font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .period-badges {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 25px;
-        }
-        .badge {
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        .badge-upa {
-            background: linear-gradient(135deg, #3366CC, #1a3a6e);
-        }
-        .badge-nda {
-            background: linear-gradient(135deg, #FF9900, #cc7a00);
-        }
+        .stat-label { font-size: 0.9rem; color: #a0a0a0; margin-top: 5px; }
         .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 40px 0 20px;
-            padding-left: 15px;
-            border-left: 4px solid #667eea;
+            font-size: 1.6rem; font-weight: 600; margin: 50px 0 25px;
+            padding-left: 15px; border-left: 4px solid #667eea;
         }
         .chart-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px; margin-bottom: 40px;
         }
         .chart-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 25px;
+            border-radius: 16px; padding: 25px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
@@ -88,125 +56,60 @@
             border-color: rgba(102, 126, 234, 0.5);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-        .chart-card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .chart-card p {
-            color: #a0a0a0;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
+        .chart-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+        .chart-card p { color: #a0a0a0; font-size: 0.85rem; line-height: 1.5; margin-bottom: 18px; }
         .chart-card a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
+            color: white; text-decoration: none; border-radius: 25px;
+            font-weight: 500; font-size: 0.85rem; transition: all 0.2s ease;
         }
-        .chart-card a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        .chart-card a:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4); }
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            border: 2px solid rgba(102, 126, 234, 0.5);
         }
+        .key-findings {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 16px; padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 40px 0;
+        }
+        .key-findings h2 { font-size: 1.5rem; margin-bottom: 25px; }
+        .findings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .finding-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px; padding: 20px;
+            border-left: 4px solid #667eea;
+        }
+        .finding-item h4 { color: #667eea; margin-bottom: 8px; font-size: 0.95rem; }
+        .finding-item p { color: #d0d0d0; font-size: 0.85rem; line-height: 1.5; }
         .methodology {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 35px;
+            border-radius: 16px; padding: 35px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 40px;
         }
-        .methodology h2 {
-            font-size: 1.4rem;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .methodology-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
+        .methodology h2 { font-size: 1.4rem; margin-bottom: 25px; }
+        .methodology-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
         .methodology-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 10px;
+            display: flex; align-items: flex-start; gap: 12px;
+            padding: 12px; background: rgba(255, 255, 255, 0.03); border-radius: 10px;
         }
-        .methodology-item .icon {
-            color: #27ae60;
-            font-size: 1.2rem;
-        }
-        .methodology-item span {
-            color: #d0d0d0;
-            font-size: 0.9rem;
-        }
+        .methodology-item .icon { color: #27ae60; font-size: 1.2rem; }
+        .methodology-item span { color: #d0d0d0; font-size: 0.9rem; }
         .disclaimer {
             background: rgba(231, 76, 60, 0.1);
             border: 1px solid rgba(231, 76, 60, 0.3);
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 30px;
+            border-radius: 12px; padding: 25px; margin-top: 30px;
         }
-        .disclaimer h3 {
-            color: #e74c3c;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .disclaimer p {
-            color: #d0d0d0;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 30px;
-            color: #707070;
-            font-size: 0.85rem;
-        }
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        .stats-banner {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        .stat-item {
-            text-align: center;
-        }
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .stat-label {
-            font-size: 0.85rem;
-            color: #a0a0a0;
-            margin-top: 5px;
-        }
+        .disclaimer h3 { color: #e74c3c; margin-bottom: 10px; }
+        .disclaimer p { color: #d0d0d0; font-size: 0.9rem; line-height: 1.6; }
+        footer { text-align: center; margin-top: 50px; padding: 30px; color: #707070; font-size: 0.85rem; }
+        footer a { color: #667eea; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -214,7 +117,7 @@
         <header>
             <div class="flag-icon">🇮🇳</div>
             <h1>India Economic Comparison System</h1>
-            <p class="subtitle">Professional-Grade Analysis of India's Economic Performance (2004-2024)</p>
+            <p class="subtitle">The Complete Economic Story: UPA (2004-2014) vs NDA (2014-2024)</p>
             <div class="period-badges">
                 <span class="badge badge-upa">UPA Era: 2004-2014</span>
                 <span class="badge badge-nda">NDA Era: 2014-2024</span>
@@ -222,161 +125,224 @@
         </header>
 
         <div class="stats-banner">
-            <div class="stat-item">
-                <div class="stat-value">20</div>
-                <div class="stat-label">Years of Data</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value">14</div>
-                <div class="stat-label">Interactive Charts</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value">6+</div>
-                <div class="stat-label">Key Indicators</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value">4</div>
-                <div class="stat-label">Data Sources</div>
+            <div class="stat-item"><div class="stat-value">20</div><div class="stat-label">Years of Data</div></div>
+            <div class="stat-item"><div class="stat-value">26</div><div class="stat-label">Interactive Charts</div></div>
+            <div class="stat-item"><div class="stat-value">15+</div><div class="stat-label">Economic Indicators</div></div>
+            <div class="stat-item"><div class="stat-value">$3.57T</div><div class="stat-label">Current GDP</div></div>
+            <div class="stat-item"><div class="stat-value">#5</div><div class="stat-label">Global Ranking</div></div>
+        </div>
+
+        <div class="key-findings">
+            <h2>📊 Key Economic Findings at a Glance</h2>
+            <div class="findings-grid">
+                <div class="finding-item">
+                    <h4>GDP Growth</h4>
+                    <p>UPA averaged 7.8% growth vs NDA's 6.1% (includes COVID -6.6%). Excluding COVID, NDA averages 7.1%.</p>
+                </div>
+                <div class="finding-item">
+                    <h4>Inflation Control</h4>
+                    <p>NDA achieved 5.0% average inflation vs UPA's 8.1% - a significant improvement in price stability.</p>
+                </div>
+                <div class="finding-item">
+                    <h4>FDI Attraction</h4>
+                    <p>NDA attracted $665B cumulative FDI vs UPA's $303B - more than double the foreign investment.</p>
+                </div>
+                <div class="finding-item">
+                    <h4>Forex Reserves</h4>
+                    <p>Reserves grew from $141B (2004) to $645B (2024) - providing 11 months of import cover.</p>
+                </div>
+                <div class="finding-item">
+                    <h4>Global Standing</h4>
+                    <p>India rose from 12th to 5th largest economy - poised to become 3rd largest by 2028.</p>
+                </div>
+                <div class="finding-item">
+                    <h4>Poverty Reduction</h4>
+                    <p>Poverty headcount fell from 37% to ~10% - approximately 260 million lifted out of poverty.</p>
+                </div>
             </div>
         </div>
 
-        <h2 class="section-title">Core Economic Indicators</h2>
+        <h2 class="section-title">📈 The Big Picture</h2>
+        <div class="chart-grid">
+            <div class="chart-card highlight-card">
+                <h3>🏆 Executive Dashboard</h3>
+                <p>Complete 9-panel view of India's economic journey - GDP, inflation, FDI, forex, poverty, and composite index all in one view.</p>
+                <a href="26_executive_dashboard.html">View Dashboard →</a>
+            </div>
+            <div class="chart-card highlight-card">
+                <h3>📊 Composite Performance Index</h3>
+                <p>Weighted score combining GDP (30%), Inflation (20%), Jobs (15%), FDI (15%), Forex (20%) for overall performance.</p>
+                <a href="25_composite_index.html">View Index →</a>
+            </div>
+            <div class="chart-card">
+                <h3>💰 Nominal GDP in USD</h3>
+                <p>From $0.72T to $3.57T - India's 5x growth journey with $1T, $2T, $3T milestone markers.</p>
+                <a href="15_nominal_gdp_usd.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>🌍 Global Ranking Journey</h3>
+                <p>From 12th to 5th largest economy - India's rise in global GDP rankings over 20 years.</p>
+                <a href="16_global_ranking.html">View Chart →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">📉 Core Economic Indicators</h2>
         <div class="chart-grid">
             <div class="chart-card">
                 <h3>📈 GDP Growth Time Series</h3>
-                <p>Interactive visualization of India's GDP growth rate with period shading for UPA and NDA eras, including COVID-19 impact annotation.</p>
+                <p>20-year GDP growth with UPA/NDA period shading and COVID-19 impact annotation.</p>
                 <a href="01_gdp_growth_timeseries.html">View Chart →</a>
             </div>
             <div class="chart-card">
-                <h3>📊 Period Comparison</h3>
-                <p>Side-by-side bar chart comparing key economic indicators (GDP, Inflation, Fiscal Deficit, Unemployment) between the two periods.</p>
+                <h3>📊 Period Comparison Bars</h3>
+                <p>Side-by-side comparison of key indicators between UPA and NDA periods.</p>
                 <a href="02_period_comparison_bars.html">View Chart →</a>
             </div>
             <div class="chart-card">
-                <h3>🎯 Multi-Dimensional Scorecard</h3>
-                <p>Radar chart showing normalized performance scores across 6 dimensions: Growth, Inflation, Fiscal Prudence, Forex, FDI, Employment.</p>
+                <h3>🎯 Multi-Dimensional Radar</h3>
+                <p>Normalized scores across Growth, Inflation, Fiscal, Forex, FDI, Employment dimensions.</p>
                 <a href="03_radar_scorecard.html">View Chart →</a>
             </div>
             <div class="chart-card">
-                <h3>💰 Forex Reserves Trend</h3>
-                <p>India's foreign exchange reserves growth from $141B to $645B over two decades, showing stability buffer accumulation.</p>
-                <a href="04_forex_reserves.html">View Chart →</a>
-            </div>
-        </div>
-
-        <h2 class="section-title">Advanced Economic Analysis</h2>
-        <div class="chart-grid">
-            <div class="chart-card">
-                <h3>⚡ Policy Impact Waterfall</h3>
-                <p>Waterfall chart decomposing growth changes by policy events: 2008 Crisis, Demonetization, GST, COVID-19, and recovery phases.</p>
-                <a href="05_policy_impact_waterfall.html">View Chart →</a>
-            </div>
-            <div class="chart-card">
-                <h3>🖥️ Comprehensive Dashboard</h3>
-                <p>Multi-panel dashboard combining GDP trends, period comparison bars, score distribution pie, and growth-inflation scatter.</p>
-                <a href="06_comprehensive_dashboard.html">View Chart →</a>
-            </div>
-            <div class="chart-card">
                 <h3>📉 GDP Trend Analysis</h3>
-                <p>GDP growth with 3-year moving average smoothing to identify underlying trends beyond year-to-year volatility.</p>
+                <p>GDP growth with 3-year moving average smoothing to identify underlying trends.</p>
                 <a href="07_gdp_trend_analysis.html">View Chart →</a>
             </div>
-            <div class="chart-card">
-                <h3>🔄 Phillips Curve Analysis</h3>
-                <p>Growth-Inflation tradeoff visualization showing which years achieved the "sweet spot" of high growth with low inflation.</p>
-                <a href="08_phillips_curve.html">View Chart →</a>
-            </div>
         </div>
 
-        <h2 class="section-title">Fiscal & External Sector</h2>
+        <h2 class="section-title">💹 Fiscal & Monetary Analysis</h2>
         <div class="chart-grid">
             <div class="chart-card">
-                <h3>⚖️ Twin Deficits Analysis</h3>
-                <p>Dual-axis visualization of fiscal deficit and current account balance - key indicators for macroeconomic stability.</p>
+                <h3>🔄 Phillips Curve</h3>
+                <p>Growth-Inflation tradeoff showing which years achieved optimal policy mix.</p>
+                <a href="08_phillips_curve.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>⚖️ Twin Deficits</h3>
+                <p>Fiscal deficit vs current account balance - key stability indicators.</p>
                 <a href="09_twin_deficits.html">View Chart →</a>
             </div>
             <div class="chart-card">
                 <h3>🏦 Debt Sustainability</h3>
-                <p>Public debt-to-GDP ratio trend with Maastricht criterion benchmark (60%) and COVID spike annotation.</p>
+                <p>Public debt-to-GDP with Maastricht 60% benchmark and COVID spike.</p>
                 <a href="10_debt_sustainability.html">View Chart →</a>
             </div>
             <div class="chart-card">
+                <h3>💵 Tax Revenue Mobilization</h3>
+                <p>Tax-to-GDP ratio trend with GST implementation marker.</p>
+                <a href="22_tax_revenue.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>💱 Rupee Exchange Journey</h3>
+                <p>INR/USD exchange rate from 44.93 to 83.12 with crisis annotations.</p>
+                <a href="23_rupee_exchange.html">View Chart →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">🌐 External Sector & Investment</h2>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h3>💰 Forex Reserves</h3>
+                <p>$141B to $645B - building a stability buffer over two decades.</p>
+                <a href="04_forex_reserves.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
                 <h3>🚢 Trade Balance</h3>
-                <p>Exports, imports, and trade balance evolution showing India's integration with global trade over 20 years.</p>
+                <p>Exports, imports, and net trade position showing global integration.</p>
                 <a href="11_trade_balance.html">View Chart →</a>
             </div>
             <div class="chart-card">
+                <h3>📈 Investment Climate</h3>
+                <p>Domestic investment (GCF) vs FDI inflows - dual-axis view.</p>
+                <a href="19_investment_climate.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
                 <h3>💵 Per Capita Income</h3>
-                <p>Per capita income growth from ₹26,674 to ₹1,84,507 - showing absolute values and year-on-year growth rates.</p>
+                <p>From ₹26,674 to ₹1,84,507 - absolute value and growth rates.</p>
                 <a href="12_per_capita_income.html">View Chart →</a>
             </div>
         </div>
 
-        <h2 class="section-title">Statistical Analysis</h2>
+        <h2 class="section-title">🏭 Structural & Sectoral Analysis</h2>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h3>🔄 Structural Transformation</h3>
+                <p>Agriculture → Industry → Services shift in GDP composition.</p>
+                <a href="17_structural_transformation.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>🏭 Manufacturing Growth</h3>
+                <p>Manufacturing sector performance with Make in India marker.</p>
+                <a href="18_manufacturing_growth.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>⚡ Policy Impact Waterfall</h3>
+                <p>Event-wise growth decomposition: Crisis, Reforms, COVID, Recovery.</p>
+                <a href="05_policy_impact_waterfall.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>📅 Policy Timeline</h3>
+                <p>Major policy events mapped onto GDP growth trajectory.</p>
+                <a href="24_policy_timeline.html">View Chart →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">👥 Social & Human Development</h2>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h3>📉 Poverty Reduction</h3>
+                <p>From 37% to ~10% - approximately 260 million lifted out of poverty.</p>
+                <a href="20_poverty_reduction.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>📈 Human Development Index</h3>
+                <p>HDI progress from 0.535 (Low) to 0.670 (Medium) category.</p>
+                <a href="21_hdi_progress.html">View Chart →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">📊 Statistical Analysis</h2>
         <div class="chart-grid">
             <div class="chart-card">
                 <h3>🔥 Correlation Heatmap</h3>
-                <p>Pearson correlation matrix revealing relationships between GDP, Inflation, Fiscal Deficit, Unemployment, Forex, and FDI.</p>
+                <p>Pearson correlations between all major economic indicators.</p>
                 <a href="13_correlation_heatmap.html">View Chart →</a>
             </div>
             <div class="chart-card">
                 <h3>📋 Statistical Summary</h3>
-                <p>Comprehensive comparison table with mean, standard deviation, and coefficient of variation for both periods.</p>
+                <p>Mean, Std Dev, CV comparison table for both periods.</p>
                 <a href="14_statistical_summary.html">View Chart →</a>
+            </div>
+            <div class="chart-card">
+                <h3>🖥️ Comprehensive Dashboard</h3>
+                <p>Multi-panel dashboard with trends, comparisons, correlations.</p>
+                <a href="06_comprehensive_dashboard.html">View Chart →</a>
             </div>
         </div>
 
         <div class="methodology">
             <h2>📋 Methodology & Data Sources</h2>
             <div class="methodology-grid">
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Official data from MOSPI, RBI, World Bank, IMF</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Difference-in-Differences causal analysis</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Synthetic Control Method for policy impacts</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Bootstrap confidence intervals (10,000 iterations)</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Complete data: All years 2004-2024 included</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Equal scrutiny applied to both periods</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Multiple normalization techniques</span>
-                </div>
-                <div class="methodology-item">
-                    <span class="icon">✓</span>
-                    <span>Ethical review framework compliance</span>
-                </div>
+                <div class="methodology-item"><span class="icon">✓</span><span>MOSPI - GDP, GVA, Per Capita Income</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>RBI - Inflation, Forex, Current Account</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>World Bank - Development Indicators, HDI</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>IMF - WEO Projections, Global Rankings</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>DPIIT - FDI Inflows by Sector</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>CMIE/NSSO - Employment, Poverty Data</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>Budget Documents - Fiscal Data</span></div>
+                <div class="methodology-item"><span class="icon">✓</span><span>UNDP - Human Development Reports</span></div>
             </div>
         </div>
 
         <div class="disclaimer">
             <h3>⚠️ Important Disclaimer</h3>
-            <p>This analysis is designed for educational and research purposes. Economic performance is multi-dimensional with many causes beyond government policy. External conditions (global economy, commodity prices, geopolitical events) differed significantly between periods. This system aims to <strong>inform debate, not settle it</strong>. Users should cross-validate findings with other sources and avoid drawing oversimplified conclusions.</p>
+            <p>This analysis is for <strong>educational and research purposes</strong>. Economic performance is multi-dimensional with many causes beyond government policy. External conditions (global economy, commodity prices, pandemics) differed significantly between periods. This system aims to <strong>inform debate, not settle it</strong>. Users should cross-validate with official sources.</p>
         </div>
 
         <footer>
-            <p>Built with Python, Plotly, and rigorous economic methodology</p>
-            <p>Data Sources: MOSPI | RBI | World Bank | IMF | DPIIT</p>
-            <p style="margin-top: 15px;">
-                <a href="https://github.com">View on GitHub</a> •
-                MIT License •
-                2024
-            </p>
+            <p>Built with Python, Plotly, and Rigorous Economic Methodology</p>
+            <p>Data: MOSPI | RBI | World Bank | IMF | DPIIT | CMIE | UNDP</p>
+            <p style="margin-top: 15px;"><a href="https://github.com/MAYANK12-WQ/India-Economic-Comparison">GitHub Repository</a> • MIT License • 2024</p>
         </footer>
     </div>
 </body>
