@@ -1,0 +1,280 @@
+# India Economic Comparison System Configuration
+# =============================================
+
+project:
+  name: "India Economic Comparison 2004-2024"
+  version: "1.0.0"
+  periods:
+    period_a:
+      name: "UPA Era"
+      start: "2004-05-22"  # UPA government formation
+      end: "2014-05-26"    # Modi government formation
+    period_b:
+      name: "NDA Era"
+      start: "2014-05-26"
+      end: "2024-06-04"    # 2024 election results
+
+# Data Sources Configuration
+data_sources:
+  official:
+    mospi:
+      name: "Ministry of Statistics and Programme Implementation"
+      url: "https://mospi.gov.in"
+      reliability_score: 8
+      update_frequency: "quarterly"
+      lag_days: 60
+      indicators:
+        - gdp
+        - gva
+        - iip
+        - cpi
+        - wpi
+
+    rbi:
+      name: "Reserve Bank of India"
+      url: "https://rbi.org.in"
+      reliability_score: 9
+      update_frequency: "monthly"
+      lag_days: 30
+      indicators:
+        - inflation
+        - money_supply
+        - forex_reserves
+        - interest_rates
+        - credit_growth
+
+    cmie:
+      name: "Centre for Monitoring Indian Economy"
+      url: "https://cmie.com"
+      reliability_score: 7
+      update_frequency: "monthly"
+      lag_days: 14
+      indicators:
+        - employment
+        - unemployment_rate
+        - consumer_sentiment
+        - business_sentiment
+
+    nsso:
+      name: "National Sample Survey Office"
+      url: "https://mospi.gov.in/nsso"
+      reliability_score: 8
+      update_frequency: "quinquennial"
+      indicators:
+        - consumption_expenditure
+        - poverty_estimates
+        - informal_employment
+
+    sebi:
+      name: "Securities and Exchange Board of India"
+      url: "https://sebi.gov.in"
+      reliability_score: 9
+      update_frequency: "daily"
+      indicators:
+        - market_capitalization
+        - fii_flows
+        - mutual_fund_aum
+
+  international:
+    world_bank:
+      name: "World Bank"
+      url: "https://data.worldbank.org"
+      reliability_score: 9
+      indicators:
+        - gdp_ppp
+        - poverty_headcount
+        - gini_coefficient
+        - doing_business_rank
+
+    imf:
+      name: "International Monetary Fund"
+      url: "https://imf.org"
+      reliability_score: 9
+      indicators:
+        - weo_projections
+        - fiscal_monitor
+        - external_sector
+
+    unctad:
+      name: "UNCTAD"
+      url: "https://unctad.org"
+      reliability_score: 8
+      indicators:
+        - fdi_inflows
+        - trade_statistics
+
+  alternative:
+    satellite:
+      night_lights:
+        source: "NOAA VIIRS"
+        reliability_score: 7
+        proxy_for: "economic_activity"
+      ndvi:
+        source: "NASA MODIS"
+        reliability_score: 8
+        proxy_for: "agricultural_output"
+
+    high_frequency:
+      google_mobility:
+        reliability_score: 7
+        proxy_for: "economic_activity"
+      electricity_consumption:
+        source: "CEA"
+        reliability_score: 9
+        proxy_for: "industrial_activity"
+      railway_freight:
+        source: "Indian Railways"
+        reliability_score: 9
+        proxy_for: "logistics_activity"
+      upi_transactions:
+        source: "NPCI"
+        reliability_score: 9
+        proxy_for: "digital_economy"
+      gst_collections:
+        source: "GST Council"
+        reliability_score: 9
+        proxy_for: "economic_formalization"
+      e_way_bills:
+        source: "GST Network"
+        reliability_score: 8
+        proxy_for: "goods_movement"
+
+# Indicator Categories
+indicators:
+  growth:
+    - gdp_growth_rate
+    - gdp_per_capita_growth
+    - gva_by_sector
+    - industrial_production_index
+    - services_pmi
+    - manufacturing_pmi
+
+  inflation:
+    - cpi_combined
+    - cpi_rural
+    - cpi_urban
+    - wpi
+    - food_inflation
+    - core_inflation
+
+  employment:
+    - unemployment_rate
+    - labor_force_participation
+    - employment_by_sector
+    - formal_employment_share
+    - epfo_payroll_additions
+
+  fiscal:
+    - fiscal_deficit_gdp
+    - revenue_deficit_gdp
+    - public_debt_gdp
+    - tax_gdp_ratio
+    - capital_expenditure
+
+  external:
+    - current_account_balance
+    - trade_deficit
+    - forex_reserves
+    - fdi_inflows
+    - fpi_flows
+    - rupee_exchange_rate
+
+  social:
+    - poverty_headcount
+    - multidimensional_poverty
+    - gini_coefficient
+    - human_development_index
+    - education_enrollment
+    - health_outcomes
+
+  infrastructure:
+    - road_construction_km
+    - railway_electrification
+    - port_capacity
+    - airport_passengers
+    - power_generation_capacity
+    - renewable_energy_share
+
+  digital:
+    - internet_penetration
+    - mobile_subscribers
+    - digital_payments_volume
+    - startup_funding
+    - patent_filings
+
+# Methodology Settings
+methodology:
+  gdp_base_years:
+    old_series: 2004-05
+    new_series: 2011-12
+
+  splicing_method: "ratio_splicing"
+
+  inflation_deflators:
+    primary: "cpi_combined"
+    alternatives:
+      - wpi
+      - gdp_deflator
+      - pce_deflator
+
+  seasonal_adjustment:
+    method: "x13_arima_seats"
+    trading_day_adjustment: true
+
+  normalization:
+    methods:
+      - population_adjusted
+      - ppp_adjusted
+      - demographically_adjusted
+      - global_condition_adjusted
+
+# Causal Inference Settings
+causal_inference:
+  methods:
+    - difference_in_differences
+    - synthetic_control
+    - regression_discontinuity
+    - instrumental_variables
+    - propensity_score_matching
+
+  robustness_checks:
+    - placebo_tests
+    - sensitivity_analysis
+    - alternative_specifications
+    - bootstrap_confidence_intervals
+
+# Uncertainty Quantification
+uncertainty:
+  confidence_level: 0.95
+  bootstrap_iterations: 10000
+  monte_carlo_simulations: 5000
+  bayesian_priors: "weakly_informative"
+
+# Ethical Framework
+ethics:
+  principles:
+    - no_cherry_picking
+    - equal_scrutiny
+    - transparent_assumptions
+    - acknowledge_limitations
+    - prevent_misuse
+
+  warnings:
+    - oversimplification
+    - spurious_correlations
+    - survivorship_bias
+    - hindsight_bias
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  rate_limit: 100  # requests per minute
+  cache_ttl: 3600  # seconds
+
+# Dashboard Configuration
+dashboard:
+  host: "0.0.0.0"
+  port: 8050
+  theme: "plotly_white"
+  default_period: "both"
